@@ -1,0 +1,20 @@
+{
+    "target": "example.com",
+    "open_ports": [
+        {
+            "port": 80,
+            "service": "HTTP",
+            "state": "OPEN"
+        },
+        {
+            "port": 443,
+            "service": "HTTPS",
+            "state": "OPEN"
+        },
+        {
+            "port": 8080,
+            "service": "HTTP-Proxy",
+            "state": "OPEN"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+*.json
+!ports.json
+!recon_report.json
+!results.json
+!zeebountee.json
+.DS_Store
