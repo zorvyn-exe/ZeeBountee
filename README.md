@@ -21,7 +21,7 @@ Ensure you have Python 3.10+ installed.
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ZeeBountee.git
+git clone https://github.com/zorvyn-exe/ZeeBountee.git
 cd ZeeBountee
 
 # Create a virtual environment
@@ -29,7 +29,7 @@ python -m venv .venv
 source .venv/bin/activate
 
 # Install the tool in development mode with all dependencies
-pip install -e .[dev]
+pip install -e .
 ```
 
 ## 🛠️ Usage
