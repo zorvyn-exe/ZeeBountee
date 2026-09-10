@@ -25,8 +25,6 @@ class ScopeValidator:
         if self._matches_domain(host, self.config.blocked_domains):
             return False
 
-        # If allowed domains list is provided, must match
-        if self.config.allowed_domains and not self._matches_domain(host, self.config.allowed_domains):
-            return False
-                
+        if self.config.allowed_domains:
+            return self._matches_domain(host, self.config.allowed_domains)
         return True

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "zeebountee"
-version = "0.1.0"
+version = "1.0.0"
 description = "A professional cybersecurity CLI reconnaissance tool."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -27,7 +27,9 @@ dependencies = [
     "click>=8.1.0",
     "rich>=13.7.0",
     # Modern, async-compatible HTTP client for reconnaissance
-    "httpx>=0.27.0"
+    "httpx>=0.27.0",
+    # Templating for HTML reports
+    "jinja2>=3.1.0"
 ]
 
 [project.optional-dependencies]

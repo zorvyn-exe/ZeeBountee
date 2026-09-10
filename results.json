@@ -1,9 +1,0 @@
-{
-    "target": "example.com",
-    "endpoints": [
-        {
-            "endpoint": "www.example.com",
-            "status_code": 200
-        }
-    ]
-}

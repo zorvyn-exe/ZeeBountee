@@ -1,8 +1,8 @@
-import pytest
 from zeebountee.models import ScopeConfig, Target
 from zeebountee.scope import ScopeValidator
 
-def test_scope_validator_empty_config():
+
+def test_scope_validator_empty_config() -> None:
     config = ScopeConfig()
     validator = ScopeValidator(config)
     
@@ -10,7 +10,7 @@ def test_scope_validator_empty_config():
     assert validator.is_in_scope("https://example.com/test")
     assert validator.is_in_scope(Target(host="192.168.1.1"))
 
-def test_scope_validator_allowed_domains():
+def test_scope_validator_allowed_domains() -> None:
     config = ScopeConfig(allowed_domains=["example.com", "test.com"])
     validator = ScopeValidator(config)
     
@@ -29,7 +29,7 @@ def test_scope_validator_allowed_domains():
     assert not validator.is_in_scope("other.com")
     assert not validator.is_in_scope("notexample.com") # should not match just suffix without dot
 
-def test_scope_validator_blocked_domains():
+def test_scope_validator_blocked_domains() -> None:
     config = ScopeConfig(
         allowed_domains=["example.com"],
         blocked_domains=["admin.example.com"]
@@ -41,7 +41,7 @@ def test_scope_validator_blocked_domains():
     assert not validator.is_in_scope("admin.example.com")
     assert not validator.is_in_scope("super.admin.example.com")
 
-def test_scope_validator_port_stripping():
+def test_scope_validator_port_stripping() -> None:
     config = ScopeConfig(allowed_domains=["example.com"])
     validator = ScopeValidator(config)
     
